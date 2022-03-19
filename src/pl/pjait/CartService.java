@@ -1,10 +1,11 @@
 package pl.pjait;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class CartService {
 
-    public Product getCheapestOne(Product[] products) {
+    public Product getCheapestOne(List<Product> products) {
         Product temporaryProduct = new Product();
         temporaryProduct.setPrice(999999);
         for (Product product : products) {
@@ -15,7 +16,7 @@ public class CartService {
         return temporaryProduct;
     }
 
-    public Product getExpensiveOne(Product[] products) {
+    public Product getExpensiveOne(List<Product> products) {
         Product temporaryProduct = new Product();
         temporaryProduct.setPrice(0);
         for (Product product : products) {
